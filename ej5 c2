@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+
+class fecha{
+private:
+    int dia, mes, anio;
+
+    bool esBisiestro (int a){
+    return (a%4==0 && a%100!=0) || (a%400==0);
+    }
+
+    int diasMes (int m, int a){
+    if (m==2){
+            if (esBisiestro(a)){
+                return 29;
+            }else{
+            return 28;
+            }
+            else if{ (m==4 || M==6 || m==9 || m==11)
+                return 30;
+            else{
+                return 31;
+            }
+           }
+    }
+
+public:
+
+    fecha (int d, int m, int a){
+    if (m>=1 && m <=12 && d<= diasMes(m,a)){
+        dia= d,
+        mes=m;
+        anio=a;
+    }else{
+    dia=1;
+    mes=1;
+    anio=2000;
+    }
+    }
+
+    void avanzarDia(){
+    if (dia> diasMes (mes, anio)){
+        dia=1;
+        mes++;
+        if (mes>12){
+            mes=1;
+            anio ++;
+        }
+    }
+    }
+
+    int vomparar (fecha f){
+    if (anio < f.anio) return -1;
+    if (anio > f.anio)return 1;
+
+    if (mes < f.mes) return -1;
+    if (mes > f.mes) return 1;
+
+    if (dia < f.dia) return -1;
+    if (dia > f.dia) return 1;
+
+    return 0;
+    }
+
+    void mostrar(){
+    cout<< dia<< "/"<< mes << "/"<< anio<<endl;
+    }
+};
+
