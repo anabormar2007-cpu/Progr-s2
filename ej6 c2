@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class punto{
+private:
+    double x;
+    double y;
+
+public:
+    punto(double a, double b){
+    x=a;
+    y=b;
+    }
+    double getX(){
+    return x;}
+
+    double getY{
+    return y;}
+};
+
+class circulo{
+private:
+    punto centro;
+    double radio;
+
+public:
+    circulo (punto c, double r): centro(c)){
+    radio=r;}
+
+    double area(){
+    return M_PI *radio*radio;
+    }
+
+    double perimetro(){
+    return 2*M_PI * radio;
+    }
+
+    bool contienepunto (double p){
+    double dx=p.getX()- centro.getX();
+    double dy= p.getY- centro.getY();
+    double distancia = sqrt (dx *dx*dy);
+    return distancia <= radio;
+    }
+};
+
