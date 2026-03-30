@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+class estudiante{
+private:
+    string nombre, carnet;
+    vector <double> calificaciones;
+
+public:
+    void agregarCalificacion (double calificacionnueva){
+    if (calificacionnueva>=0 || calificacionnueva<101){
+        calificaciones.push_back(calificacionnueva);
+    }else{
+    cout<< "La calificacion ingresada no es valida"<<endl;}
+    }
+
+    void calcularPromedio(double promedio){
+    for (int i=0; i < calificaciones.size();){
+       promedio = promedio+calificaciones [i]/calificaciones.size ()-1;
+        cout<< "El promedio es de "<< promedio<< "puntos"<< endl;
+    }
+    }
+};
