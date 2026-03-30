@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+
+class rectangulo{
+private:
+    double base, altura;
+
+public:
+    rectangulo (double base, double altura){
+    base= b;
+    altura=a;
+    cout << "Se ha registrado la altura "<< altura << "y la base "<< base<< endl;
+    }
+
+    calcularArea (){
+    area = base * altura;
+    cout<< "El area es "<< area<< endl;
+    }
+
+    calcularPerimetro(){
+    perimetro= 2* area + 2* altura;
+    cout << "El perimetro es"<< perimetro<< endl;
+    }
+
+    double getBase (){
+    return base;
+    }
+
+    double getAltura{
+    return altura
+    }
+
+    double getArea{
+    return area;
+    }
+
+    double getPerimetro{
+    return perimetro;
+    }
+
+    void setBase(){
+    if (baseNueva > 0){
+            base = baseNueva;
+} else{
+cout<< "la base debe tener valor positivo"
+}}
+
+void setAltura(){
+if (alturaNueva >0){
+    altura=alturaNueva;
+}else{
+cout<< "el valor de la altura debe ser positivo"<< endl;
+}
+}
+
+};
