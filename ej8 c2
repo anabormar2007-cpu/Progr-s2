@@ -1,0 +1,60 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+class contacto{
+private:
+    string nombre, mail,telefono;
+public:
+    contacto (string n, string t string m){
+   nombre=n;
+   telefono =t;
+   mail=m;
+}
+};
+
+class agenda{
+private:
+ vector <contacto> contactos;
+
+public:
+
+    void agregarContacto (string nombre, string telefono, string mail){
+    for (int i =0; i < contactos:size; i++ ){
+        if (contactos[i].nombre == nombre){
+    cout<< "ya existe un contacto con este nombre"<< end;
+}   }
+else{
+    contactos.push-back (contact(nombre, telefono,mail))
+    cout<< "contacto agregado"<< endl;
+}
+    }
+
+    void eliminarContacto (string nombre){
+    for (int i=0;i<contactos.size;i++){
+        contactos.erase(contactis.begin()+i);
+        cout << "cintacto eliminado"<< endl;
+    }
+    }
+
+
+    void buscarContacto(string nombre){
+                        for (int i=0;i<contactos.size();i++){
+                            if (contactos[i].nombre ==nombre{
+                            cout<< "telefono:"<< contactos[i].telefono<< endl;
+<<                        } else{
+cout<< "Contacto no encontrado"<< endl;}
+                        }
+                        }
+
+     void mostrarContactos(){
+                        for (int i=0; i<contactos.size(); i++){
+                            cout<< contactos[i].nombre << "-"<< contactos[i].telefono<< endl;
+                        }
+                        }
+
+    };
+
+
+
