@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class reloj{
+private:
+    int horas, minutos, segundos;
+
+public:
+    reloj (int horas, int minutos, int segundos){
+       void sethora (int horanueva)
+           if (horanueva >= 0, horanueva <= 23){
+        horas = horanueva;
+        }
+        else{
+            cout<< "La hora debe estar dentro de los valores admitidos (0-23)"<<endl;
+        }
+        void setminuto (int minutonuevo){
+        if (minutonuevo >=0, minutonuevo<=59){
+            minutos = minutonuevo;
+        }
+        else{
+            cout "Los minutos deben estar dentro de los valores admitidos (0-59)"<< endl;
+        }
+    }
+    void setsegundo (int segundonuevo){
+    if (segundonuevo >=0; segundonuevo <= 59){
+        segundos = segundonuevo;
+        }
+        else {
+            cout "Los segundos deben estar dentro de los valores admitidos(0-59)"<< endl;
+        }
+    }
+    void avanzarSegundo (){
+    segundos++;}
+    void mostrarHora(){
+    cout<< "La hora es:"<< horas<< ":"< minutos<< ":"<< segundos<<endl;
+    }
+    }
+    }
+
+};
